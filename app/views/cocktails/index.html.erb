@@ -1,12 +1,17 @@
-<h3>Les cocktails d'Heritiana</h3>
+<h1>Les cocktails d'Heritiana</h1>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li>
-      <%= cocktail.name %>
-    </li>
-  <% end %>
+  <h3>La liste des cocktails</h3>
 
-</ul>
+    <ul>
+      <% @cocktails.each do |cocktail| %>
+        <li>
+          <%= link_to cocktail_path(cocktail) do %>
+            <%= cocktail.name %>
+          <% end %>
 
-<%= link_to "Creer un cocktail", new_cocktail_path %>
+        </li>
+      <% end %>
+
+    </ul>
+
+    <%= link_to "Creer un cocktail", new_cocktail_path %>

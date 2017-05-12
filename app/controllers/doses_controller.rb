@@ -14,6 +14,7 @@ class DosesController < ApplicationController
     end
 
     def destroy
+      byebug
     end
 
 
